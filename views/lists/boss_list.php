@@ -1,81 +1,151 @@
-<!DOCTYPE html>
-<html lang="cs">
+
+<?php
+session_start();
+require_once __DIR__ . '/../../includes/navbar.php';
+require_once __DIR__ . '/../../includes/header.php';
+?>
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Dark Souls 3 Bossové</title>
-    <link rel="stylesheet" href="public/style.css"> <!-- cesta k tvému CSS -->
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #1e1e1e;
-            color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .boss-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .boss-card {
-            background-color: #2e2e2e;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-
-        .boss-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .boss-card a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #cc9933;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .boss-card a:hover {
-            background-color: #ffcc00;
-        }
-    </style>
+    <link rel="stylesheet" href="/WA-Vondracek-DS3-projekt/public/assets/style.css">
 </head>
-<body>
-    <div class="container">
+  <body class="backdrop-body">
+    <main>
+        <div class="boss-gallery">
+        
+            <div class="title">
         <h1>Bossové ze hry Dark Souls III</h1>
-
-        <div class="boss-grid">
-            <?php foreach ($bosses as $boss): ?>
-                <div class="boss-card">
-                    <?php if (!empty($boss['image'])): ?>
-                        <img src="public/images/<?php echo htmlspecialchars($boss['image']); ?>" alt="<?php echo htmlspecialchars($boss['name']); ?>">
-                    <?php endif; ?>
-
-                    <h2><?php echo htmlspecialchars($boss['name']); ?></h2>
-                    <p><?php echo mb_strimwidth(strip_tags($boss['description']), 0, 100, '...'); ?></p>
-                    <a href="index.php?id=<?php echo $boss['id']; ?>">Detail</a>
-                </div>
-            <?php endforeach; ?>
         </div>
-    </div>
+        <div class="gap1"></div>
+        <div class="column1">
+            <a href="../bosses/boss_Aldrich.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/aldritch.png" alt="">
+                    <figcaption>Aldrich, Devourer of Gods</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Dancer.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/dancer.png" alt="">
+                    <figcaption>Dancer of the Boreal Valley</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Deacons.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/deacons.png" alt="">
+                    <figcaption>Deacons of the Deep</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Demon_King.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/demon_king.png" alt="">
+                    <figcaption>Old Demon King</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Drangoslayer.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/dragonslayer.png" alt="">
+                    <figcaption>Dragonslayer Armor</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Greatwood.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/greatwood.png" alt="">
+                    <figcaption>Curse-Rotted Greatwood</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Iudex.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/gundyr.png" alt="">
+                    <figcaption>Iudex Gundyr</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Lothric.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/lothric.png" alt="">
+                    <figcaption>Lothric, Younger Prince</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Nameless.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/nameless.png" alt="">
+                    <figcaption>Nameless King</figcaption>
+                </figure>
+            </a>
+            </div>
+            <div class="column2">
+            <a href="../bosses/boss_Oceiros.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/oceiros.png" alt="">
+                    <figcaption>Oceiros, the Consumed King</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Pontiff.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/pontiff.png" alt="">
+                    <figcaption>Pontiff Sulyvahn</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Sage.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/sage.png" alt="">
+                    <figcaption>Crystal Sage</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Soul.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/soul.png" alt="">
+                    <figcaption>Soul of Cinder</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Vordt.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/vordt.png" alt="">
+                    <figcaption>Vordt of the Boreal Valley</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Watchers.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/watchers.png" alt="">
+                    <figcaption>Abyss Watchers</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Wolnir.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/wolnir.png" alt="">
+                    <figcaption>High Lord Wolnir</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Wyvern.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/wyvern.png" alt="">
+                    <figcaption>Ancient Wyvern</figcaption>
+                </figure>
+            </a>
+
+            <a href="../bosses/boss_Yhorm.php">
+                <figure>
+                    <img src="/WA-Vondracek-DS3-projekt/public/visuals/yhorm.png" alt="">
+                    <figcaption>Yhorm the Giant</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="gap2"></div>
+        </main>
 </body>
 </html>
