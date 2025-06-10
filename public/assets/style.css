@@ -152,16 +152,7 @@ h1 {
 .content-box td:nth-child(2) {
     font-style: italic;
 }
-/*obrázek bosse*/
-.content-box .boss-photo {
-    width: 100%;
-    max-height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-    background: #ddd url('https://via.placeholder.com/700x350?text=Fotka+postavy') center center no-repeat;
-    background-size: cover;
-    margin-bottom: 15px;
-}
+
 /*popisek bosse*/
 .content-box .description {
     background-color: rgba(30, 30, 30, 0.8);
@@ -250,7 +241,7 @@ h1 {
 .content-box form button {
     width: 100%;
 }
-/*zprávy že jsi hlasoval a že stránka neobsahuje komentáře*/
+/*zpráva že jsi hlasoval a že stránka neobsahuje komentáře*/
 .content-box .info-text {
     font-family: 'IM Fell English', serif;
     color: #ccc;

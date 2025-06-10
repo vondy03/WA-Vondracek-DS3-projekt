@@ -5,7 +5,6 @@ require_once __DIR__ . '/../../includes/header.php';
 ?>
 <head>
 <title>Vítejte na mém blogu</title>
-
 <link rel="icon" type="image/png" href="/WA-Vondracek-DS3-projekt/public/visuals/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/WA-Vondracek-DS3-projekt/public/visuals/favicon.svg" />
 <link rel="shortcut icon" href="/WA-Vondracek-DS3-projekt/public/visuals/favicon.ico" />

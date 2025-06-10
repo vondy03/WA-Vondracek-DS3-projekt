@@ -1,5 +1,4 @@
 <?php
-// models/bosses.php
 require_once __DIR__ . '/../config/database.php';
 
 class Boss {
